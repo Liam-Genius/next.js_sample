@@ -9,19 +9,27 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="할일관리서비스 투두 입니다." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <nav>
-        <Link href="/">
-          <a style={{ color: "red" }}>메인</a>
-        </Link>
-
-        <Link href="/about">
-          <a style={{ color: "blue" }}>어바웃</a>
-        </Link>
-        <Link href="contact">
-          <a style={{ color: "pink" }}>연락처</a>
-        </Link>
-      </nav>
+      <header>
+        <nav>
+          <ul className="flex">
+            <li>
+              <Link href="/">
+                <a className="block p-4 hover:text-[#afafaf]">메인</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="block p-4 hover:text-[#afafaf]">어바웃</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="contact">
+                <a className="block p-4 hover:text-[#afafaf]">연락처</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <Component {...pageProps} />
     </>
   );
