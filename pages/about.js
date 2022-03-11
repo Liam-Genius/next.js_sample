@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import { AppBar, Toolbar } from "@mui/material";
+import Head from "next/head";
+import ToolbarContent from "../components/ToolbarContent";
 
 export default function Home() {
   return (
@@ -7,7 +9,14 @@ export default function Home() {
         <title>앱 소개 페이지</title>
       </Head>
 
-      <h1>어바웃 페이지</h1>
+      <AppBar position="fixed">
+        <Toolbar>
+          <ToolbarContent></ToolbarContent>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
+
+      <h1 className="mt-3">앱 소개 페이지</h1>
     </>
-  )
+  );
 }
